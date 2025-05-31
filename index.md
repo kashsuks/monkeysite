@@ -1,5 +1,6 @@
 ---
-title: "Home"
+title: Home
+layout: default
 ---
 
 # Monkeysite
