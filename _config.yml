@@ -1,5 +1,59 @@
 title: monkeysite
-description: ""
+description: "a minimalist jekyll theme inspired by monkeytype"
 encoding: utf-8
+baseurl: ""
+url: ""
 
-exclude: ["README.md", "LICENSE", "*.gem", "*.gemspec", "Gemfile.lock"]
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude: 
+  - README.md
+  - LICENSE
+  - "*.gem"
+  - "*.gemspec"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+author:
+  name: Kashyap Sukshavasi
+  email: ksukshavas@gmail.com
+
+social:
+  github: kashsuks
+  
+navigation:
+  - name: home
+    url: /
+  - name: about
+    url: /about
+  - name: blog
+    url: /blog
+  - name: contact
+    url: /contact

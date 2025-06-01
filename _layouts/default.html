@@ -1,6 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   {% include head.html %}
   <body>
-    {{ content }}
+    {% include navigation.html %}
+    
+    <main>
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+    
+    <footer style="text-align: center; padding: 2rem 0; color: var(--sub-color); border-top: 1px solid var(--sub-alt-color); margin-top: 2rem;">
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title | default: "monkeysite" }}. inspired by <a href="https://monkeytype.com" target="_blank">monkeytype</a></p>
+      </div>
+    </footer>
   </body>
 </html>
